@@ -20,29 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/learning_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning_system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Quiz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_223926_create_quizzes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_13_223926_create_quizzes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_224011_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_13_224011_create_questions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_224040_create_choices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_14_224040_create_choices_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_224149_create_user_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_15_224149_create_user_answers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +180,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Exceptions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eslah-backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -358,7 +336,9 @@
       <workItem from="1605220365229" duration="1789000" />
       <workItem from="1605222269062" duration="1680000" />
       <workItem from="1605224046487" duration="1753000" />
-      <workItem from="1605225825702" duration="974000" />
+      <workItem from="1605225825702" duration="2191000" />
+      <workItem from="1605230047820" duration="1168000" />
+      <workItem from="1605278200829" duration="91000" />
     </task>
     <servers />
   </component>
@@ -386,10 +366,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="342" y="86" width="662" height="542" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1603730479409" />
-    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl" timestamp="1605103882097">
+    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl" timestamp="1605278290343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605103882097" />
+    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605278290343" />
     <state x="349" y="0" width="657" height="722" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603412198630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -402,10 +382,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="347" y="160" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605225024889" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605224441881">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605226518807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605224441881" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605226518807" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
