@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="" />
+    <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/learning_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning_system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_223926_create_quizzes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_13_223926_create_quizzes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_224011_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_13_224011_create_questions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_224040_create_choices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_14_224040_create_choices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_13_224149_create_user_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_15_224149_create_user_answers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +52,19 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -121,19 +176,42 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iqICUhk1FXasxnRc04uZfGHSnI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Exceptions" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Exceptions" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -151,10 +229,197 @@
       <updated>1602628567802</updated>
       <workItem from="1602628568881" duration="1540000" />
       <workItem from="1602630204375" duration="2561000" />
+      <workItem from="1602632782336" duration="613000" />
+      <workItem from="1602677527361" duration="2048000" />
+      <workItem from="1602680538093" duration="640000" />
+      <workItem from="1602689255449" duration="598000" />
+      <workItem from="1602707741578" duration="598000" />
+      <workItem from="1602756771592" duration="597000" />
+      <workItem from="1602779883959" duration="602000" />
+      <workItem from="1602804576099" duration="357000" />
+      <workItem from="1602805759460" duration="1822000" />
+      <workItem from="1602807775965" duration="1080000" />
+      <workItem from="1602857822690" duration="600000" />
+      <workItem from="1602885936282" duration="598000" />
+      <workItem from="1602887043711" duration="1992000" />
+      <workItem from="1602889065534" duration="1784000" />
+      <workItem from="1602890927644" duration="101000" />
+      <workItem from="1602891137335" duration="1920000" />
+      <workItem from="1602893132389" duration="1539000" />
+      <workItem from="1602971080718" duration="1713000" />
+      <workItem from="1602972838990" duration="1678000" />
+      <workItem from="1602974644693" duration="1947000" />
+      <workItem from="1602976657205" duration="1773000" />
+      <workItem from="1602978758980" duration="2635000" />
+      <workItem from="1603029448991" duration="1528000" />
+      <workItem from="1603031254742" duration="2352000" />
+      <workItem from="1603034628538" duration="1110000" />
+      <workItem from="1603037809501" duration="663000" />
+      <workItem from="1603053733336" duration="350000" />
+      <workItem from="1603061153825" duration="14000" />
+      <workItem from="1603061408436" duration="599000" />
+      <workItem from="1603099925823" duration="785000" />
+      <workItem from="1603112346121" duration="295000" />
+      <workItem from="1603406446985" duration="599000" />
+      <workItem from="1603408996382" duration="1720000" />
+      <workItem from="1603411269140" duration="1475000" />
+      <workItem from="1603413082308" duration="732000" />
+      <workItem from="1603465651556" duration="1192000" />
+      <workItem from="1603467967381" duration="1203000" />
+      <workItem from="1603488077765" duration="595000" />
+      <workItem from="1603537276890" duration="597000" />
+      <workItem from="1603545149106" duration="646000" />
+      <workItem from="1603546969121" duration="168000" />
+      <workItem from="1603642045967" duration="598000" />
+      <workItem from="1603695251027" duration="596000" />
+      <workItem from="1603716161255" duration="595000" />
+      <workItem from="1603723373176" duration="1052000" />
+      <workItem from="1603724952313" duration="1791000" />
+      <workItem from="1603726773379" duration="1790000" />
+      <workItem from="1603728583948" duration="1824000" />
+      <workItem from="1603730427587" duration="1789000" />
+      <workItem from="1603732241657" duration="1792000" />
+      <workItem from="1603748518673" duration="602000" />
+      <workItem from="1603750483864" duration="779000" />
+      <workItem from="1603757148724" duration="554000" />
+      <workItem from="1603791420448" duration="483000" />
+      <workItem from="1603891249813" duration="1214000" />
+      <workItem from="1603893179211" duration="732000" />
+      <workItem from="1603899663865" duration="599000" />
+      <workItem from="1603973686626" duration="46000" />
+      <workItem from="1604129339640" duration="16000" />
+      <workItem from="1604137904723" duration="637000" />
+      <workItem from="1604147353403" duration="1800000" />
+      <workItem from="1604149231533" duration="1756000" />
+      <workItem from="1604151382010" duration="1786000" />
+      <workItem from="1604153190288" duration="1774000" />
+      <workItem from="1604155130179" duration="814000" />
+      <workItem from="1604159444409" duration="1784000" />
+      <workItem from="1604161297447" duration="599000" />
+      <workItem from="1604163256964" duration="1159000" />
+      <workItem from="1604165070301" duration="1786000" />
+      <workItem from="1604166892127" duration="2092000" />
+      <workItem from="1604169054245" duration="599000" />
+      <workItem from="1604171996858" duration="599000" />
+      <workItem from="1604174486202" duration="309000" />
+      <workItem from="1604176172267" duration="1743000" />
+      <workItem from="1604181692554" duration="359000" />
+      <workItem from="1604184877553" duration="21000" />
+      <workItem from="1604437807897" duration="1859000" />
+      <workItem from="1604440720660" duration="759000" />
+      <workItem from="1604442882277" duration="1784000" />
+      <workItem from="1604444696143" duration="1785000" />
+      <workItem from="1604446514497" duration="1745000" />
+      <workItem from="1604500026764" duration="803000" />
+      <workItem from="1604501074061" duration="1795000" />
+      <workItem from="1604502889701" duration="1069000" />
+      <workItem from="1604504711108" duration="2063000" />
+      <workItem from="1604507220165" duration="2132000" />
+      <workItem from="1604516151275" duration="819000" />
+      <workItem from="1604532607920" duration="1112000" />
+      <workItem from="1604560938501" duration="1074000" />
+      <workItem from="1604590619862" duration="55000" />
+      <workItem from="1604699709686" duration="599000" />
+      <workItem from="1604748467592" duration="1848000" />
+      <workItem from="1604750345611" duration="1304000" />
+      <workItem from="1604752402978" duration="932000" />
+      <workItem from="1604754735086" duration="597000" />
+      <workItem from="1604755347944" duration="1739000" />
+      <workItem from="1604757306459" duration="2066000" />
+      <workItem from="1604760903345" duration="1301000" />
+      <workItem from="1604762919142" duration="1784000" />
+      <workItem from="1604774095331" duration="2429000" />
+      <workItem from="1604776586673" duration="1485000" />
+      <workItem from="1604778233536" duration="1763000" />
+      <workItem from="1604780058301" duration="1788000" />
+      <workItem from="1604781867138" duration="607000" />
+      <workItem from="1604790077691" duration="32000" />
+      <workItem from="1605016727558" duration="598000" />
+      <workItem from="1605046718505" duration="23000" />
+      <workItem from="1605093202885" duration="599000" />
+      <workItem from="1605093995319" duration="3309000" />
+      <workItem from="1605097367945" duration="1787000" />
+      <workItem from="1605099195224" duration="1800000" />
+      <workItem from="1605101027896" duration="2034000" />
+      <workItem from="1605103719459" duration="1625000" />
+      <workItem from="1605105559144" duration="1400000" />
+      <workItem from="1605128012480" duration="2211000" />
+      <workItem from="1605135895501" duration="1654000" />
+      <workItem from="1605137735202" duration="1255000" />
+      <workItem from="1605171538337" duration="803000" />
+      <workItem from="1605173391889" duration="1849000" />
+      <workItem from="1605177092659" duration="636000" />
+      <workItem from="1605184844548" duration="1261000" />
+      <workItem from="1605186171310" duration="625000" />
+      <workItem from="1605202542121" duration="600000" />
+      <workItem from="1605214091788" duration="1784000" />
+      <workItem from="1605215916431" duration="1790000" />
+      <workItem from="1605217739228" duration="840000" />
+      <workItem from="1605220365229" duration="1789000" />
+      <workItem from="1605222269062" duration="1680000" />
+      <workItem from="1605224046487" duration="1753000" />
+      <workItem from="1605225825702" duration="974000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="229" width="494" height="254" key="#Updates" timestamp="1602890969612">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="229" width="494" height="254" key="#Updates/0.0.1366.728@0.0.1366.728" timestamp="1602890969612" />
+    <state x="342" y="86" width="662" height="542" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603730479409">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="342" y="86" width="662" height="542" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1603730479409" />
+    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl" timestamp="1605103882097">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605103882097" />
+    <state x="349" y="0" width="657" height="722" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603412198630">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="349" y="0" width="657" height="722" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1603412198630" />
+    <state x="389" y="112" width="587" height="560" key="find.popup" timestamp="1605225355085">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="112" width="587" height="560" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605225355085" />
+    <state x="347" y="160" key="run.anything.popup" timestamp="1605225024889">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="347" y="160" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605225024889" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605224441881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605224441881" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/src/views/Quiz/quizzes.jsx</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/app.js</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

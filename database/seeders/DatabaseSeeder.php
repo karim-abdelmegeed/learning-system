@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\EducationalLevel;
+use App\Models\Role;
+use App\Models\Subject;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,7 +16,39 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
+
     {
-        // \App\Models\User::factory(10)->create();
+        $educational_levels = [
+            [
+                'name' => 'First Secondary'
+            ],
+            [
+                'name' => 'Second Secondary'
+            ],
+            [
+                'name' => 'Third Secondary'
+            ]
+        ];
+        $roles = [
+            [
+                "name" => 'admin'
+            ],
+            [
+                "name" => 'student'
+            ],
+        ];
+        $subjects = [
+            [
+                'name' => 'English physics'
+            ],
+            [
+                'name' =>'فيزياء عربى'
+            ]
+        ];
+        EducationalLevel::insert($educational_levels);
+        Role::insert($roles);
+        Subject::insert($subjects);
+
+        User::insert(["name" => "Bassem Mohamed", "phone" => "01280422976", "password" => bcrypt("123456"), "role_id" => 1]);
     }
 }

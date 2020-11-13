@@ -17,7 +17,8 @@ class CreateChoicesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('question_id');
             $table->string('choice');
-            $table->enum('choice_type',['text','file']);
+            $table->enum('choice_type', ['text', 'file']);
+            $table->boolean('correct')->default(false);
             $table->foreign('question_id')->on('questions')->references('id');
             $table->timestamps();
         });

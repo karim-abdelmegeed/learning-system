@@ -15,11 +15,12 @@ class CreateUserAnswersTable extends Migration
     {
         Schema::create('student_answers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('question_id');
             $table->unsignedBigInteger('choice_id');
             $table->foreign('question_id')->on('questions')->references('id');
             $table->foreign('choice_id')->on('choices')->references('id');
+            $table->foreign('user_id')->on('users')->references('id');
             $table->timestamps();
         });
     }

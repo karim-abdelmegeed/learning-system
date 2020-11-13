@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\EducationalLevelController;
+use \App\Http\Controllers\QuizController;
+use \App\Http\Controllers\QuestionController;
+use \App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+Route::post('login', [AuthController::class, 'login']);
+Route::post('register', [AuthController::class, 'register']);
+
+
+Route::get('/educational-levels', [EducationalLevelController::class, '__invoke']);
+Route::get('quizzes', [QuizController::class, 'index']);
+Route::post('/quiz', [QuizController::class, 'store']);
+Route::get('/subjects', [QuizController::class, 'getSubjects']);
+Route::post('/questions', [QuestionController::class, 'store']);
+

@@ -16,10 +16,13 @@ class CreateQuizzesTable extends Migration
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->integer('models');
+            $table->integer('subject_id');
             $table->string('token')->unique();
             $table->unsignedBigInteger('educational_level_id');
             $table->time('time')->nullable();
             $table->dateTime('end_date');
+            $table->dateTime('result_date');
             $table->timestamps();
         });
     }
