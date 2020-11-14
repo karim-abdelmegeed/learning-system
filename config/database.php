@@ -73,7 +73,7 @@ return [
             'username' => $DATABASE_URL["user"],
             'password' =>  $DATABASE_URL["pass"],
             'charset' => 'utf8',
-            'client_encoding'=>'utf8',
+            'client_encoding'=>'SQL_ASCII',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
