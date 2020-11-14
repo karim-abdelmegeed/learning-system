@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eslah-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -339,6 +340,8 @@
       <workItem from="1605225825702" duration="2191000" />
       <workItem from="1605230047820" duration="1168000" />
       <workItem from="1605278200829" duration="91000" />
+      <workItem from="1605310519064" duration="718000" />
+      <workItem from="1605313433806" duration="1167000" />
     </task>
     <servers />
   </component>
@@ -362,6 +365,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="426" y="229" width="494" height="254" key="#Updates/0.0.1366.728@0.0.1366.728" timestamp="1602890969612" />
+    <state x="426" y="168" width="504" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605310621272">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="168" width="504" height="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605310621272" />
     <state x="342" y="86" width="662" height="542" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603730479409">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -382,10 +389,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="347" y="160" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605225024889" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605226518807">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605314746478">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605226518807" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605314746478" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
