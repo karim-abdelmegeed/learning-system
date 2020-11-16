@@ -33,6 +33,7 @@ function App() {
     const hist = createBrowserHistory();
     const isAuthenticated = localStorage.getItem('access_token');
 
+    console.log("systematic");
     return (
         <div className="app">
             <Router history={hist}>

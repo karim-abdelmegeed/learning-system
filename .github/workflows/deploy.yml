@@ -2,10 +2,10 @@ name: Deploy
 
 on:
   push:
-    branches:[ master ]
+    branches: [ master ]
 
 jobs:
-  build:
+  laravel-tests:
 
     runs-on: self-hosted
 
@@ -13,3 +13,4 @@ jobs:
       - run: git pull
       - run: composer install
       - run: npm install
+
