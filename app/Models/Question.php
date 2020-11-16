@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
+
+    protected $with=['choices'];
+
+    public function choices()
+    {
+        return $this->hasMany(Choice::class, 'question_id')->select(['id','choice','question_id']);
+    }
 }

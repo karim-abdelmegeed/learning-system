@@ -7,6 +7,7 @@ import RTLPage from "./views/RTLPage/RTLPage.js";
 import CreateQuiz from "./views/Quiz/create";
 import Quizzes from "./views/Quiz/quizzes";
 import Model from "./views/Quiz/Model";
+import TakeQuiz from "./views/Quiz/TakeQuiz";
 
 const dashboardRoutes = [
     {
@@ -55,6 +56,14 @@ const dashboardRoutes = [
         rtlName: "نموذج امتحان",
         icon: Language,
         component: Model,
+        layout: "/admin"
+    },
+    {
+        path: "/quiz/:id/take",
+        name: "Take Quiz",
+        rtlName: "ابدا الامتحان",
+        icon: Language,
+        component: TakeQuiz,
         layout: "/admin"
     },
 ];

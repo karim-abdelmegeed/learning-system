@@ -11,7 +11,7 @@ class Quiz extends Model
 
     protected $appends=['model_names'];
 
-    public function models()
+    public function quizModels()
     {
         return $this->hasMany(QuizModel::class, 'quiz_id');
     }
@@ -19,7 +19,7 @@ class Quiz extends Model
     public function getModelNamesAttribute()
     {
         $models = [];
-        foreach ($this->models()->get()->toArray() as $model) {
+        foreach ($this->quizModels()->get()->toArray() as $model) {
             array_push($models,$model['name']);
         }
         return $models;

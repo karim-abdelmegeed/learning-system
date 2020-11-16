@@ -1,0 +1,15 @@
+name: Deploy
+
+on:
+  push:
+    branches:[ master ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+      - run: git pull
+      - run: composer install
+      - run: npm install

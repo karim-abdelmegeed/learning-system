@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\QuizModelResource;
 use App\Models\Quiz;
 use App\Models\QuizModel;
 use App\Models\Subject;
@@ -13,7 +14,7 @@ class QuizController extends Controller
 {
     public function index()
     {
-        $quizzes = Quiz::with('models')->get();
+        $quizzes = Quiz::with('quizModels')->get();
         return response()->json($quizzes, 200);
     }
 
@@ -56,5 +57,15 @@ class QuizController extends Controller
     {
         $subjects = Subject::all();
         return response()->json($subjects, 200);
+    }
+
+    public function takeQuiz(Request $request)
+    {
+        $models = Quiz::find($request->quiz_id)->quizModels->pluck('id')->toArray();
+        $random_model_id = array_rand($models);
+        $quiz_model = QuizModel::find($models[$random_model_id]);
+        return new QuizModelResource($quiz_model);
+
+
     }
 }

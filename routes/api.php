@@ -26,6 +26,8 @@ Route::post('register', [AuthController::class, 'register']);
 Route::get('/educational-levels', [EducationalLevelController::class, '__invoke']);
 Route::get('quizzes', [QuizController::class, 'index']);
 Route::post('/quiz', [QuizController::class, 'store']);
+Route::get('/quiz/take', [QuizController::class, 'takeQuiz']);
 Route::get('/subjects', [QuizController::class, 'getSubjects']);
 Route::post('/questions', [QuestionController::class, 'store']);
+
 

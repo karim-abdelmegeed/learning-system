@@ -15,14 +15,30 @@ function Quizzes() {
             sortable: true,
         },
         {
+            name: "End At",
+            selector: "end_date",
+            sortable: true
+        },
+        {
+            name: "Result Date",
+            selector: "result_date",
+            sortable: true
+        },
+        {
             name: 'Models',
             selector: 'models',
             cell: row => <div>
-                {row.models.map((model, key) => {
+                {row.quiz_models.map((model, key) => {
                     return <a href={'#'} onClick={e => {
                         history.push("/admin/model/" + model.id);
                     }} key={key}>{model.name}<br/></a>
                 })}</div>,
+            sortable: false
+        },
+        {
+            name: 'Actions',
+            selector: '',
+            cell: row => <a href={"/admin/quiz/" + row.id + "/take"}>{row.title}</a>,
             sortable: false
         },
     ];
@@ -38,7 +54,7 @@ function Quizzes() {
 
     return (
         <div>
-            <Button color="primary" style={{padding:"10px" ,marginBottom:"20px"}}onClick={e=>{
+            <Button color="primary" style={{padding: "10px", marginBottom: "20px"}} onClick={e => {
                 history.push("/admin/create-quiz")
             }}>Create Quiz</Button>
             <DataTable
