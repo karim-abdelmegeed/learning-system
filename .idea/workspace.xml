@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -365,7 +363,7 @@
       <workItem from="1605396311126" duration="1135000" />
       <workItem from="1605558574893" duration="987000" />
       <workItem from="1605563825580" duration="1627000" />
-      <workItem from="1605565498908" duration="307000" />
+      <workItem from="1605565498908" duration="913000" />
     </task>
     <servers />
   </component>
