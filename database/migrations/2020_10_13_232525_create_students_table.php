@@ -13,13 +13,7 @@ class CreateStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('students', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->unsignedBigInteger('educational_level_id');
-            $table->foreign('educational_level_id')->on('educational_levels')->references('id');
-            $table->timestamps();
-        });
+
     }
 
     /**

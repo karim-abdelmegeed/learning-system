@@ -12,5 +12,5 @@ jobs:
     steps:
       - run: git pull
       - run: composer install
-      - run: npm install
+      - run: php artisan migrate:fresh --seed
 

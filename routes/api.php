@@ -29,5 +29,6 @@ Route::post('/quiz', [QuizController::class, 'store']);
 Route::get('/quiz/take', [QuizController::class, 'takeQuiz']);
 Route::get('/subjects', [QuizController::class, 'getSubjects']);
 Route::post('/questions', [QuestionController::class, 'store']);
+Route::post('/questions/answer', [QuestionController::class, 'validateAnswer'])->middleware('auth:api');
 
 

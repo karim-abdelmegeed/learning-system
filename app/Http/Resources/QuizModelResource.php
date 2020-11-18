@@ -16,7 +16,7 @@ class QuizModelResource extends JsonResource
     {
         return [
             'model_id' => $this->id,
-            'questions' => $this->questions
+            'questions' => $this->questions()->paginate(1)
         ];
     }
 }

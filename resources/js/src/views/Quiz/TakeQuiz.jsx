@@ -9,18 +9,23 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import Button from "../../components/CustomButtons/Button";
+import CardFooter from "../../components/Card/CardFooter";
 
 
 function TakeQuiz() {
 
     const [questions, setQuestions] = useState([]);
-    const [answers, setAnswers] = useState([]);
+    const [answers, setAnswers] = useState(0);
+    const [model, setModel] = useState(null);
+    const [nextOrFinish, setNextOrFinish] = useState('NEXT')
     useEffect(() => {
         const getQuestions = async () => {
             return await axios.get('/api/quiz/take', {params: {"quiz_id": 1}})
         }
         getQuestions().then((response) => {
-            setQuestions(response.data.data.questions);
+            setQuestions(response.data.data.questions.data);
+            setModel(response.data.data.model_id);
         });
 
     }, []);
@@ -37,16 +42,16 @@ function TakeQuiz() {
                                             <GridItem xs={12} sm={12} md={12}>
                                                 <FormControl component="fieldset">
                                                     <FormLabel component="legend">{question.description}</FormLabel>
-                                                    <RadioGroup value={answers[key]} name="gender1"
+                                                    <RadioGroup name="gender1"
+                                                                value={answers}
                                                                 onChange={e => {
-                                                                    let answers_copy = answers.slice();
-                                                                    answers_copy[key] = e.target.value;
-                                                                    setAnswers([...answers_copy]);
+                                                                    setAnswers(parseInt(e.target.value));
                                                                 }}>
                                                         {
                                                             question.choices.map((choice, choiceKey) => {
                                                                 return (
-                                                                    <FormControlLabel key={choiceKey} value={choice.id}
+                                                                    <FormControlLabel key={choiceKey}
+                                                                                      value={choice.id}
                                                                                       control={<Radio/>}
                                                                                       label={choice.choice}/>
                                                                 );
@@ -60,12 +65,34 @@ function TakeQuiz() {
                                     </CardBody>
                                 </Card>
                             </GridItem>
-                        </GridContainer>
-                    );
-                })
-            }
-        </div>
-    )
-}
+                            <GridItem>
+                                <Button color="primary"
+                                        onClick={e => {;
+                                            const config = {
+                                                headers: { Authorization: `Bearer ${localStorage.getItem("access_token")}` }
+                                            };
+                                            axios.post("/api/questions/answer", {
+                                                    "model_id": model,
+                                                    "answer": answers,
+                                                    "question_id": question.id
+                                                },
+                                                config
+                                            ).then((response) => {
+                                                if (response.data) {
+                                                    setQuestions([response.data]);
+                                                } else {
+                                                    setNextOrFinish('FINISH')
+                                                }
 
-export default TakeQuiz
+                                            })
+                                        }}>{nextOrFinish}</Button>
+                                            </GridItem>
+                                            </GridContainer>
+                                            );
+                                            })
+                                            }
+                                            </div>
+                                            )
+                                            }
+
+                                            export default TakeQuiz
