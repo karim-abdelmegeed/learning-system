@@ -26,6 +26,7 @@ class QuestionController extends Controller
         foreach ($data as $question_model) {
             $question = new Question();
             $question->description = $question_model['question'];
+            $question->file_path = isset($question_model['file']) ? $question_model['file'] : null;
             $question->quiz_model_id = $request->model_id;
             $question->save();
             foreach ($question_model['choices'] as $key => $question_choice) {
@@ -36,23 +37,26 @@ class QuestionController extends Controller
                 $choice->save();
             }
         }
+    }
 
+    public function uploadQuestionImage(Request $request)
+    {
+        $file = $request->file('file')->store('/public/questions');
+        return $file;
     }
 
     public function validateAnswer(Request $request)
     {
-        $model_id=$request->model_id;
-        $question_id=$request->question_id;
-        $answer=$request->answer;
-        $student_answer=new StudentAnswer();
-        $student_answer->user_id=auth()->id();
-        $student_answer->question_id=$question_id;
-        $student_answer->choice_id=$answer;
+
+        $model_id = $request->model_id;
+        $question_id = $request->question_id;
+        $answer = $request->answer;
+        $student_answer = new StudentAnswer();
+        $student_answer->user_id = auth()->id();
+        $student_answer->question_id = $question_id;
+        $student_answer->choice_id = $answer;
         $student_answer->save();
-        $next_question=Question::where('quiz_model_id',$model_id)->where('id','>',$question_id)->first();
+        $next_question = Question::where('quiz_model_id', $model_id)->where('id', '>', $question_id)->first();
         return $next_question;
-
-
-
     }
 }
