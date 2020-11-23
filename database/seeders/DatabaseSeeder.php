@@ -49,6 +49,6 @@ class DatabaseSeeder extends Seeder
         Role::insert($roles);
         Subject::insert($subjects);
 
-        User::insert(["name" => "Bassem Mohamed", "phone" => "01280422976", "password" => bcrypt("123456"), "role_id" => 1]);
+        User::insert(["name" => "Bassem Mohamed", "phone" => "01280422976", "password" => bcrypt("01280422976123456"), "role_id" => 1]);
     }
 }
