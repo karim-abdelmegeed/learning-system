@@ -7,6 +7,7 @@ use App\Models\Choice;
 use App\Models\Question;
 use App\Models\QuizModel;
 use App\Models\StudentAnswer;
+use App\Models\UserQuiz;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -51,11 +52,18 @@ class QuestionController extends Controller
         $model_id = $request->model_id;
         $question_id = $request->question_id;
         $answer = $request->answer;
+        $quiz = QuizModel::find($model_id)->quiz;
         $student_answer = new StudentAnswer();
         $student_answer->user_id = auth()->id();
         $student_answer->question_id = $question_id;
         $student_answer->choice_id = $answer;
+        $choice = Choice::find($answer);
+        $choice->correct == "1" ? $score = 1 : $score = 0;
+        $student_answer->score = $score;
         $student_answer->save();
+        $user_quiz = UserQuiz::where('quiz_id', $quiz->id)->where('user_id', Auth::id())->first();
+        $user_quiz->score+=$score;
+        $user_quiz->save();
         $next_question = Question::where('quiz_model_id', $model_id)->where('id', '>', $question_id)->first();
         return $next_question;
     }

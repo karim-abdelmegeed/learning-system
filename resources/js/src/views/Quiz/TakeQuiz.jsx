@@ -11,6 +11,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import Button from "../../components/CustomButtons/Button";
 import CardFooter from "../../components/Card/CardFooter";
+import { useParams, useHistory } from "react-router-dom";
 
 
 function TakeQuiz() {
@@ -19,9 +20,11 @@ function TakeQuiz() {
     const [answers, setAnswers] = useState(0);
     const [model, setModel] = useState(null);
     const [nextOrFinish, setNextOrFinish] = useState('NEXT')
+    let quiz_model = useParams();
+    let history = useHistory();
     useEffect(() => {
         const getQuestions = async () => {
-            return await axios.get('/api/quiz/take', { params: { "quiz_id": 1 } })
+            return await axios.get('/api/quiz/take', { params: { "model_id": quiz_model.id } })
         }
         getQuestions().then((response) => {
             setQuestions(response.data.data.questions.data);
@@ -35,9 +38,9 @@ function TakeQuiz() {
             {
                 questions.map((question, key) => {
                     if (question.file_path) {
-                            questionImage = <img style={{ "width": "700px", "height": "520px" }}
-                                key={key}
-                                src={"/storage/" + question.file_path} />
+                        questionImage = <img style={{ "width": "700px", "height": "520px" }}
+                            key={key}
+                            src={"/storage/" + question.file_path} />
                     }
                     return (
                         <GridContainer key={key}>
@@ -90,6 +93,7 @@ function TakeQuiz() {
                                                 setQuestions([response.data]);
                                             } else {
                                                 setNextOrFinish('FINISH')
+                                                history.push('/admin/quizzes');
                                             }
 
                                         })

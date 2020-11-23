@@ -15,4 +15,5 @@ class Question extends Model
     {
         return $this->hasMany(Choice::class, 'question_id')->select(['id','choice','question_id']);
     }
+    
 }

@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/views/Quiz/Question.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/views/Quiz/Question.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="e55ad508-15a9-48b7-b4f6-2efe81f95494" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +178,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ouredube" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -388,6 +383,7 @@
       <workItem from="1605741364307" duration="2235000" />
       <workItem from="1605823692972" duration="593000" />
       <workItem from="1605876084765" duration="592000" />
+      <workItem from="1605951309535" duration="40000" />
     </task>
     <servers />
   </component>
@@ -423,10 +419,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="416" y="121" width="524" height="478" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605660284674" />
-    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl" timestamp="1605397451986">
+    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl" timestamp="1605951356311">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605397451986" />
+    <state x="466" y="121" width="424" height="478" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605951356311" />
     <state x="187" y="0" key="SettingsEditor" timestamp="1605565471001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

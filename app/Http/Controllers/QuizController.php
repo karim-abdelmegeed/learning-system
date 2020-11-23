@@ -6,8 +6,11 @@ use App\Http\Resources\QuizModelResource;
 use App\Models\Quiz;
 use App\Models\QuizModel;
 use App\Models\Subject;
+use App\Models\UserQuiz;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class QuizController extends Controller
@@ -50,7 +53,6 @@ class QuizController extends Controller
         }
         QuizModel::insert($quiz_models);
         return response()->json(200);
-
     }
 
     public function getSubjects()
@@ -61,11 +63,20 @@ class QuizController extends Controller
 
     public function takeQuiz(Request $request)
     {
+        $quiz_model = QuizModel::find($request->model_id);
+        return new QuizModelResource($quiz_model);
+    }
+    public function initStudentQuiz(Request $request)
+    {
+        $quiz_id = $request->quiz_id;
+
+        if (UserQuiz::where('user_id', Auth::id())->where('quiz_id', $quiz_id)->first()) {
+            return response()->json("you can not take quiz", 422);
+        }
+        DB::table('user_quizzes')
+            ->insert(['user_id' => Auth::id(), 'quiz_id' => $quiz_id, 'score' => 0]);
         $models = Quiz::find($request->quiz_id)->quizModels->pluck('id')->toArray();
         $random_model_id = array_rand($models);
-        $quiz_model = QuizModel::find($models[$random_model_id]);
-        return new QuizModelResource($quiz_model);
-
-
+        return $models[$random_model_id];
     }
 }

@@ -24,8 +24,9 @@ Route::post('register', [AuthController::class, 'register']);
 
 
 Route::get('/educational-levels', [EducationalLevelController::class, '__invoke']);
-Route::get('quizzes', [QuizController::class, 'index']);
+Route::get('quizzes', [QuizController::class, 'index'])->middleware('auth:api');
 Route::post('/quiz', [QuizController::class, 'store']);
+Route::post('/quiz/init', [QuizController::class, 'initStudentQuiz'])->middleware('auth:api');
 Route::get('/quiz/take', [QuizController::class, 'takeQuiz']);
 Route::get('/subjects', [QuizController::class, 'getSubjects']);
 Route::post('/questions', [QuestionController::class, 'store']);

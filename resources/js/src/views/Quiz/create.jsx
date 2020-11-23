@@ -78,8 +78,8 @@ function CreateQuiz() {
                                     />
                                 </GridItem>
                             </GridContainer>
-                            <GridContainer  style={{paddingTop:"25px"}}>
-                                <GridItem xs={12} md={9} sm={9}>
+                            {/* <GridContainer  style={{paddingTop:"25px"}}> */}
+                                {/* <GridItem xs={12} md={9} sm={9}>
                                     <Flatpickr
                                         data-enable-time
                                         value={time}
@@ -96,7 +96,7 @@ function CreateQuiz() {
                                         }}
                                     />
                                 </GridItem>
-                            </GridContainer>
+                            </GridContainer> */}
                             <GridContainer>
                                 <GridItem xs={12} md={9} sm={9}>
                                     <Flatpickr
