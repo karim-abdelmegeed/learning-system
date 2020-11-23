@@ -93,6 +93,9 @@ function Login() {
                                     }
                                 });
                             }}>Login</Button>
+                            <Button color="danger" onClick={e => {
+                              history.push('/register')
+                            }}>Register</Button>
                         </CardFooter>
                     </Card>
                 </GridItem>

@@ -8,6 +8,7 @@ import CreateQuiz from "./views/Quiz/create";
 import Quizzes from "./views/Quiz/quizzes";
 import Model from "./views/Quiz/Model";
 import TakeQuiz from "./views/Quiz/TakeQuiz";
+import Students from "./views/Students/Students.jsx";
 
 const dashboardRoutes = [
     {
@@ -64,6 +65,14 @@ const dashboardRoutes = [
         rtlName: "ابدا الامتحان",
         icon: Language,
         component: TakeQuiz,
+        layout: "/admin"
+    },
+    {
+        path: "/students",
+        name: "Students",
+        rtlName: "الطلاب",
+        icon: Language,
+        component:Students,
         layout: "/admin"
     },
 ];

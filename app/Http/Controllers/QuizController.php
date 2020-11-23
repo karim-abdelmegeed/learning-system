@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\QuizModelResource;
 use App\Models\Quiz;
 use App\Models\QuizModel;
+use App\Models\Role;
 use App\Models\Subject;
 use App\Models\UserQuiz;
 use Carbon\Carbon;
@@ -17,7 +18,14 @@ class QuizController extends Controller
 {
     public function index()
     {
-        $quizzes = Quiz::with('quizModels')->get();
+        if (auth()->user()->role_id == Role::ADMIN) {
+            $quizzes = Quiz::with('quizModels')->get();
+        } else {
+            $quizzes = Quiz::get()->map(function($quiz){
+                $quiz->quiz_models=[];
+                return $quiz;
+            });
+        }
         return response()->json($quizzes, 200);
     }
 

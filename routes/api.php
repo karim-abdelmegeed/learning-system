@@ -6,6 +6,7 @@ use \App\Http\Controllers\EducationalLevelController;
 use \App\Http\Controllers\QuizController;
 use \App\Http\Controllers\QuestionController;
 use \App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,5 @@ Route::get('/subjects', [QuizController::class, 'getSubjects']);
 Route::post('/questions', [QuestionController::class, 'store']);
 Route::post('/question/image/upload', [QuestionController::class, 'uploadQuestionImage']);
 Route::post('/questions/answer', [QuestionController::class, 'validateAnswer'])->middleware('auth:api');
-
+Route::get('/students',[UsersController::class,'getStudents']);
 

@@ -27,44 +27,50 @@ function Quizzes() {
         {
             name: 'Models',
             selector: 'models',
-            cell: row => <div>
-                {row.quiz_models.map((model, key) => {
-                    return <a href={'#'} onClick={e => {
-                        history.push("/admin/model/" + model.id);
-                    }} key={key}>{model.name}<br /></a>
-                })}</div>,
+            cell: row => <div>{
+                row.quiz_models.map((model, key) => {
+                    return (
+                        <a href={'#'} onClick={_e => {
+                            history.push("/admin/model/" + model.id);
+                        }} key={key}>{model.name}<br /></a>
+
+                    )
+                })
+
+
+            }</div>,
             sortable: false
         },
         {
             name: 'Result',
             selector: '',
-            cell: row =>{
-                if(new Date(row.result_date) <= new Date()){
-                  return row.score
-                } 
+            cell: row => {
+                if (new Date(row.result_date) <= new Date()) {
+                    return row.score
+                }
             },
             sortable: true
         },
         {
             name: 'Actions',
             selector: '',
-            cell: row =>{
-               if(new Date(row.end_date) >= new Date()){
-                return(
-                    <button onClick={e => {
-                        let config = {
-                            headers: {
-                                'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
-                            }
-                        };
-                        axios.post("/api/quiz/init", { "quiz_id": row.id }, config).then((response) => {
-                            history.push("/admin/quiz/" + response.data + "/take");
-                        }).catch(e => {
-                            console.log(e.response.data)
-                        })
-                    }}>{row.title}</button>
-                );
-               }
+            cell: row => {
+                if (new Date(row.end_date) >= new Date()) {
+                    return (
+                        <button onClick={e => {
+                            let config = {
+                                headers: {
+                                    'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+                                }
+                            };
+                            axios.post("/api/quiz/init", { "quiz_id": row.id }, config).then((response) => {
+                                history.push("/admin/quiz/" + response.data + "/take");
+                            }).catch(e => {
+                                console.log(e.response.data)
+                            })
+                        }}>{row.title}</button>
+                    );
+                }
             },
             sortable: false
         },
@@ -77,7 +83,7 @@ function Quizzes() {
                     'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
                 }
             };
-            await axios.get('/api/quizzes',config).then((response) => {
+            await axios.get('/api/quizzes', config).then((response) => {
                 setData(response.data)
             });
         }
