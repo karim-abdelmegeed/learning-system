@@ -75,15 +75,22 @@ function Quizzes() {
             sortable: false
         },
     ];
-    const user = localStorage.getItem('user');
-    let createquiz;
+    const user = JSON.parse(localStorage.getItem('user'));
+    let createquiz, quiz_data={};
 
     useEffect(() => {
         const getData = async () => {
+            if (user.educational_level_id && user.subject_id) {
+                quiz_data = {
+                    'educational_level_id': user.educational_level_id,
+                    'subject_id': user.subject_id,
+                }
+            }
             let config = {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
-                }
+                },
+                params: quiz_data,
             };
             await axios.get('/api/quizzes', config).then((response) => {
                 setData(response.data)
@@ -92,7 +99,7 @@ function Quizzes() {
         getData();
     }, []);
 
-    if (JSON.parse(user).role_id === 1) {
+    if (user.role_id === 1) {
         (
             createquiz = <div>
                 <Button color="primary" style={{ padding: "10px", marginBottom: "20px" }} onClick={e => {

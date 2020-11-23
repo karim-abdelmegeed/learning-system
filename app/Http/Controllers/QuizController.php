@@ -16,15 +16,24 @@ use Illuminate\Support\Facades\Validator;
 
 class QuizController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         if (auth()->user()->role_id == Role::ADMIN) {
             $quizzes = Quiz::with('quizModels')->get();
         } else {
-            $quizzes = Quiz::get()->map(function($quiz){
-                $quiz->quiz_models=[];
-                return $quiz;
-            });
+            if ($request->has('subject_id') && $request->has('educational_level_id')) {
+                $quizzes = Quiz::where('subject_id',$request->subject_id)
+                ->where('educational_level_id',$request->educational_level_id)
+                ->get()->map(function ($quiz) {
+                    $quiz->quiz_models = [];
+                    return $quiz;
+                });
+            } else {
+                $quizzes = Quiz::get()->map(function ($quiz) {
+                    $quiz->quiz_models = [];
+                    return $quiz;
+                });
+            }
         }
         return response()->json($quizzes, 200);
     }
