@@ -94,7 +94,6 @@ export default function AdminNavbarLinks() {
                         localStorage.removeItem('access_token');
                         localStorage.removeItem('user');
                         history.push('/login')
-
                       }}
                       className={classes.dropdownItem}
                     >

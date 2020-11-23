@@ -6,7 +6,7 @@ import Students from "./views/Students/Students";
 var user = localStorage.getItem('user');
 var dashboardRoutes = [];
 
-if (user && user.role_id == 1) {
+if (user && JSON.parse(user).role_id === 1) {
     dashboardRoutes = [
         {
             path: "/quizzes",
@@ -26,7 +26,7 @@ if (user && user.role_id == 1) {
         },
     ];
 }
-else {
+else if(user && JSON.parse(user).role_id === 2) {
     dashboardRoutes = [
         {
             path: "/quizzes",
@@ -40,5 +40,5 @@ else {
 }
 
 
-
+console.log(dashboardRoutes)
 export default dashboardRoutes;

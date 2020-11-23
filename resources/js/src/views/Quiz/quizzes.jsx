@@ -75,6 +75,8 @@ function Quizzes() {
             sortable: false
         },
     ];
+    const user = localStorage.getItem('user');
+    let createquiz;
 
     useEffect(() => {
         const getData = async () => {
@@ -90,11 +92,19 @@ function Quizzes() {
         getData();
     }, []);
 
+    if (JSON.parse(user).role_id === 1) {
+        (
+            createquiz = <div>
+                <Button color="primary" style={{ padding: "10px", marginBottom: "20px" }} onClick={e => {
+                    history.push("/admin/create-quiz")
+                }}>Create Quiz</Button>
+            </div>
+        )
+    }
+
     return (
         <div>
-            <Button color="primary" style={{ padding: "10px", marginBottom: "20px" }} onClick={e => {
-                history.push("/admin/create-quiz")
-            }}>Create Quiz</Button>
+            {createquiz}
             <DataTable
                 columns={columns}
                 data={data}

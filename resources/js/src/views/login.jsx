@@ -90,6 +90,7 @@ function Login() {
                                         localStorage.setItem("access_token", res.data.data.access_token)
                                         localStorage.setItem("user", JSON.stringify(res.data.data.user));
                                         history.push("/admin/quizzes");
+                                        window.location.reload();
                                     }
                                 });
                             }}>Login</Button>
