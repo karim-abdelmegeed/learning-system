@@ -22,12 +22,12 @@ class QuizController extends Controller
             $quizzes = Quiz::with('quizModels')->get();
         } else {
             if ($request->has('subject_id') && $request->has('educational_level_id')) {
-                $quizzes = Quiz::where('subject_id',$request->subject_id)
-                ->where('educational_level_id',$request->educational_level_id)
-                ->get()->map(function ($quiz) {
-                    $quiz->quiz_models = [];
-                    return $quiz;
-                });
+                $quizzes = Quiz::where('subject_id', $request->subject_id)
+                    ->where('educational_level_id', $request->educational_level_id)
+                    ->get()->map(function ($quiz) {
+                        $quiz->quiz_models = [];
+                        return $quiz;
+                    });
             } else {
                 $quizzes = Quiz::get()->map(function ($quiz) {
                     $quiz->quiz_models = [];
@@ -95,5 +95,10 @@ class QuizController extends Controller
         $models = Quiz::find($request->quiz_id)->quizModels->pluck('id')->toArray();
         $random_model_id = array_rand($models);
         return $models[$random_model_id];
+    }
+    public function getModelQuestions(Request $request)
+    {
+        $quizModel = QuizModel::find($request->model);
+        return  response()->json($quizModel->questions);
     }
 }

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import GridContainer from "../components/Grid/GridContainer";
 import GridItem from "../components/Grid/GridItem";
 import Card from "../components/Card/Card";
@@ -7,8 +7,10 @@ import CardBody from "../components/Card/CardBody";
 import CustomInput from "../components/CustomInput/CustomInput";
 import CardFooter from "../components/Card/CardFooter";
 import Button from "../components/CustomButtons/Button";
-import {makeStyles} from "@material-ui/core/styles";
-import {useHistory} from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 import axios from "axios";
 
@@ -36,11 +38,11 @@ function Login() {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     let history = useHistory();
-    if(localStorage.getItem('access_token')){
+    if (localStorage.getItem('access_token')) {
         history.push('/admin/quizzes');
     }
     return (
-        <div style={{marginTop: "50px"}}>
+        <div style={{ marginTop: "50px" }}>
             <GridContainer>
                 <GridItem xs={3} sm={3} md={3}>
                 </GridItem>
@@ -85,17 +87,24 @@ function Login() {
                         </CardBody>
                         <CardFooter>
                             <Button color="primary" onClick={e => {
-                                axios.post("/api/login", {"phone": phone, "password": password}).then(res => {
+                                axios.post("/api/login", { "phone": phone, "password": password }).then(res => {
                                     if (res.data.status) {
-                                        localStorage.setItem("access_token", res.data.data.access_token)
-                                        localStorage.setItem("user", JSON.stringify(res.data.data.user));
-                                        history.push("/admin/quizzes");
-                                        window.location.reload();
+                                        swal("Good job!", "You Logged in Successfully!", "success");
+                                        setTimeout(() => {
+                                            localStorage.setItem("access_token", res.data.data.access_token)
+                                            localStorage.setItem("user", JSON.stringify(res.data.data.user));
+                                            window.location.href = "/admin/quizzes";
+                                        }, 1000);
                                     }
-                                });
+                                }).catch(e=>{
+                                    swal({
+                                        title: "Login Failed",
+                                        text: "Password or Phone is incorrect!",
+                                        icon: "error",
+                                      });                                });
                             }}>Login</Button>
                             <Button color="danger" onClick={e => {
-                              history.push('/register')
+                                history.push('/register')
                             }}>Register</Button>
                         </CardFooter>
                     </Card>

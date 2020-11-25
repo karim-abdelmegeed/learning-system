@@ -9,6 +9,7 @@ import Quizzes from "./views/Quiz/quizzes";
 import Model from "./views/Quiz/Model";
 import TakeQuiz from "./views/Quiz/TakeQuiz";
 import Students from "./views/Students/Students.jsx";
+import Lessons from "./views/Lessons/Lessons.js";
 
 const dashboardRoutes = [
     {
@@ -75,6 +76,14 @@ const dashboardRoutes = [
         component:Students,
         layout: "/admin"
     },
+    {
+        path: "/Lessons",
+        name: "Lessons",
+        rtlName: "الطلاب",
+        icon: Language,
+        component: Lessons,
+        layout: "/admin"
+    }
 ];
 
 export default dashboardRoutes;

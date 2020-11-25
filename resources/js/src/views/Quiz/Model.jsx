@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import Question from "./Question";
 import GlobalState from "../../contexts/GlobalState";
@@ -9,6 +9,13 @@ function Model() {
     const [counter, setCounter] = useState([1]);
     const [questions, setQuestions] = useState([{}]);
     let params = useParams();
+    useEffect(() => {
+        axios.get('/api/quiz/model/', { params: { "model": params.id } }).then((response) => {
+            response.data.map(questions => {
+                setQuestions(questions);
+            })
+        });
+    }, []);
     return (
         <div>
             <Button variant="contained" color="primary" onClick={e => {

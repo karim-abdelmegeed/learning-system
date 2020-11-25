@@ -34,4 +34,5 @@ Route::post('/questions', [QuestionController::class, 'store']);
 Route::post('/question/image/upload', [QuestionController::class, 'uploadQuestionImage']);
 Route::post('/questions/answer', [QuestionController::class, 'validateAnswer'])->middleware('auth:api');
 Route::get('/students',[UsersController::class,'getStudents']);
+Route::get('/quiz/model',[QuizController::class, 'getModelQuestions']);
 

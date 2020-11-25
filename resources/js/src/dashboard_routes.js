@@ -1,6 +1,7 @@
 import Language from "@material-ui/icons/Language";
 import Quizzes from "./views/Quiz/quizzes";
 import Students from "./views/Students/Students";
+import Lessons from "./views/Lessons/Lessons";
 
 
 var user = localStorage.getItem('user');
@@ -24,6 +25,14 @@ if (user && JSON.parse(user).role_id === 1) {
             component: Students,
             layout: "/admin"
         },
+        {
+            path: "/lessons",
+            name: "Lessons",
+            rtlName: "الطلاب",
+            icon: Language,
+            component: Lessons,
+            layout: "/admin"
+        }
     ];
 }
 else if(user && JSON.parse(user).role_id === 2) {

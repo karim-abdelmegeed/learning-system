@@ -13,12 +13,14 @@
         "react-collapsible": "^2.8.1",
         "react-data-table-component": "^6.11.5",
         "react-dom": "16.13.1",
+        "react-dropzone": "^11.2.4",
         "react-flatpickr": "^3.10.6",
         "react-router-dom": "5.2.0",
         "react-scripts": "3.4.1",
         "react-select": "^3.1.0",
         "react-swipeable-views": "0.13.9",
         "styled-components": "^5.2.0",
+        "sweetalert": "^2.1.2",
         "transform-class-properties": "^1.0.0-beta"
     },
     "scripts": {
